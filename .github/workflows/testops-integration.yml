@@ -54,7 +54,7 @@ jobs:
         with:
           allure-endpoint: https://demo.testops.cloud
           allure-token: ${{ secrets.ALLURE_TOKEN }}
-          allure-project-id: 5459
+          allure-project-id: 5492
           # allurectl-version: 2.22.1
       - name: Build with Gradle and upload test results to TestOps
         run: |
