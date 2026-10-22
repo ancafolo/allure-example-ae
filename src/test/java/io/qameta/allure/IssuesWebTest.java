@@ -35,7 +35,7 @@ public class IssuesWebTest {
     @Tags({@Tag("web"), @Tag("critical")})
     @DisplayName("Creating new issue by authorized user")
     public void shouldCreateIssue() {
-        //steps.openIssuesPage(OWNER, REPO);
+        steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
         steps.shouldSeeIssueWithTitle(ISSUE_TITLE);
     }
