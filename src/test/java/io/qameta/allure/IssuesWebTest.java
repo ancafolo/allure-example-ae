@@ -41,19 +41,6 @@ public class IssuesWebTest {
     }
 
     @Test
-    @TM4J("AE-T3")
-    @Microservice("Billing")
-    @Story("Create new issue")
-    @JiraIssues({@JiraIssue("AE-1")})
-    @Tags({@Tag("web"), @Tag("critical")})
-    @DisplayName("Creating new issue by authorized user #2")
-    public void shouldCreateIssue() {
-        //steps.openIssuesPage(OWNER, REPO);
-        steps.createIssueWithTitle(ISSUE_TITLE);
-        steps.shouldSeeIssueWithTitle(ISSUE_TITLE);
-    }
-
-    @Test
     @TM4J("AE-T5")
     @Microservice("Repository")
     @Story("Close existing issue")
