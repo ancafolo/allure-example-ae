@@ -35,8 +35,8 @@ public class IssuesWebTest {
     @Tags({@Tag("web"), @Tag("critical")})
     @DisplayName("Creating new issue by authorized user")
     public void shouldCreateIssue() {
-        //steps.openIssuesPage(OWNER, REPO);
-        // steps.createIssueWithTitle(ISSUE_TITLE);
+        steps.openIssuesPage(OWNER, REPO);
+        steps.createIssueWithTitle(ISSUE_TITLE);
         steps.shouldSeeIssueWithTitle(ISSUE_TITLE);
     }
 
@@ -50,7 +50,7 @@ public class IssuesWebTest {
     public void shouldCloseIssue() {
         steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
-        // steps.closeIssueWithTitle(ISSUE_TITLE);
+        steps.closeIssueWithTitle(ISSUE_TITLE);
         steps.shouldNotSeeIssueWithTitle(ISSUE_TITLE);
     }
 

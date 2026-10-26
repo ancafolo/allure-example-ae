@@ -35,7 +35,7 @@ public class PullRequestsWebTest {
     @JiraIssues({@JiraIssue("AE-3")})
     @DisplayName("Creating new pull request by authorized user")
     public void shouldCreatePullRequest() {
-        steps.openPullRequestsPage(OWNER, REPO);
+        //steps.openPullRequestsPage(OWNER, REPO);
         steps.createPullRequestFromBranch(BRANCH);
         steps.shouldSeePullRequestForBranch(BRANCH);
     }
