@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * @author eroshenkoam (Artem Eroshenko).
  */
@@ -52,6 +54,7 @@ public class IssuesWebTest {
         steps.createIssueWithTitle(ISSUE_TITLE);
         steps.closeIssueWithTitle(ISSUE_TITLE);
         steps.shouldNotSeeIssueWithTitle(ISSUE_TITLE);
+        assertEquals("closed", "open", "Issue state should be closed");
     }
 
 
