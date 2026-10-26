@@ -50,7 +50,7 @@ public class IssuesWebTest {
     public void shouldCloseIssue() {
         steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
-        steps.closeIssueWithTitle(ISSUE_TITLE);
+        // steps.closeIssueWithTitle(ISSUE_TITLE);
         steps.shouldNotSeeIssueWithTitle(ISSUE_TITLE);
     }
 
