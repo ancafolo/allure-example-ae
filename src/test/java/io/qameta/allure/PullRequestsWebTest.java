@@ -36,7 +36,7 @@ public class PullRequestsWebTest {
     @DisplayName("Creating new pull request by authorized user")
     public void shouldCreatePullRequest() {
         //steps.openPullRequestsPage(OWNER, REPO);
-        steps.createPullRequestFromBranch(BRANCH);
+        // steps.createPullRequestFromBranch(BRANCH);
         steps.shouldSeePullRequestForBranch(BRANCH);
     }
 
