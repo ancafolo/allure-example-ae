@@ -19,6 +19,7 @@ public class PullRequestsWebTest {
     private static final String REPO = "allure2";
 
     private static final String BRANCH = "new-feature";
+    private static final String BRANCH_two = "new-feature_two";
 
     private final WebSteps steps = new WebSteps();
 
@@ -35,9 +36,9 @@ public class PullRequestsWebTest {
     @JiraIssues({@JiraIssue("AE-3")})
     @DisplayName("Creating new pull request by authorized user")
     public void shouldCreatePullRequest() {
-        //steps.openPullRequestsPage(OWNER, REPO);
-        // steps.createPullRequestFromBranch(BRANCH);
-        steps.shouldSeePullRequestForBranch(BRANCH);
+        steps.openPullRequestsPage(OWNER, REPO);
+        steps.createPullRequestFromBranch(BRANCH);
+        steps.shouldSeePullRequestForBranch(BRANCH_two);
     }
 
     @Test
