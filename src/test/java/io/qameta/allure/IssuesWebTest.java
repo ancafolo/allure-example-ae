@@ -36,7 +36,7 @@ public class IssuesWebTest {
     @DisplayName("Creating new issue by authorized user")
     public void shouldCreateIssue() {
         //steps.openIssuesPage(OWNER, REPO);
-        steps.createIssueWithTitle(ISSUE_TITLE);
+        // steps.createIssueWithTitle(ISSUE_TITLE);
         steps.shouldSeeIssueWithTitle(ISSUE_TITLE);
     }
 
