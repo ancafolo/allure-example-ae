@@ -1,4 +1,6 @@
 package io.qameta.allure;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -32,6 +34,7 @@ public class IssuesWebTest {
 
     @Test
     @TM4J("AE-T3")
+    @Severity(SeverityLevel.CRITICAL)
     @Microservice("Billing")
     @Story("Create new issue")
     @JiraIssues({@JiraIssue("AE-1")})
@@ -45,6 +48,7 @@ public class IssuesWebTest {
 
     @Test
     @TM4J("AE-T5")
+    @Severity(SeverityLevel.BLOCKER)
     @Microservice("Repository")
     @Story("Close existing issue")
     @Tags({@Tag("web"), @Tag("regress")})
@@ -61,6 +65,7 @@ public class IssuesWebTest {
 
     @Test
     @TM4J("AE-T4")
+    @Severity(SeverityLevel.BLOCKER)
     @Microservice("Repository")
     @Story("Create new issue")
     @Tags({@Tag("web"), @Tag("regress")})
