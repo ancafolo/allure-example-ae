@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -64,7 +65,7 @@ public class IssuesWebTest {
     @Story("Create new issue")
     @Tags({@Tag("web"), @Tag("regress")})
     @JiraIssues({@JiraIssue("AE-6")})
-    @DisplayName("Adding note to advertisement")
+    @DisplayName("Adding note to advertisement_test")
     public void shouldAddLabelToIssue() {
         steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
