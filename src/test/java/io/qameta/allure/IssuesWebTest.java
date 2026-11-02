@@ -75,6 +75,7 @@ public class IssuesWebTest {
         steps.openIssuesPage(OWNER, REPO);
         steps.createIssueWithTitle(ISSUE_TITLE);
         steps.shouldSeeIssueWithTitle(ISSUE_TITLE);
+        throw new IllegalStateException("Label service is unavailable");
     }
 
 
