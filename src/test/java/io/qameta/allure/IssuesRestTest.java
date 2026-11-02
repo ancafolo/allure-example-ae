@@ -7,6 +7,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static io.qameta.allure.Allure.parameter;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 
 @Layer("rest")
 @Owner("baev")
@@ -20,6 +22,7 @@ public class IssuesRestTest {
 
     @TM4J("AE-T1")
     @Story("Create new issue")
+    @Severity(SeverityLevel.BLOCKER)
     @Microservice("Billing")
     @JiraIssues({@JiraIssue("AE-1")})
     @Tags({@Tag("api"), @Tag("smoke")})
@@ -33,6 +36,7 @@ public class IssuesRestTest {
 
     @TM4J("AE-T2")
     @Story("Close existing issue")
+    @Severity(SeverityLevel.CRITICAL)
     @Microservice("Repository")
     @Tags({@Tag("api"), @Tag("regress")})
     @JiraIssues({@JiraIssue("AE-2")})
